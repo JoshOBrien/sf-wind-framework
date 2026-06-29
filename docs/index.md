@@ -72,35 +72,7 @@ function windyRChart(width) {
 }
 ```
 
-## Using data from Python data loader
-
-Data loader: `docs/data/windPy.csv.py`
-
-```js echo
-const windPy = await FileAttachment("./data/windPy.csv").csv({ typed: true });
-```
-
-```js
-function windyPyChart(width) {
-  return Plot.plot({
-    width: width,
-    x: { domain: directions, label: "Wind direction" },
-    marks: [
-      Plot.barY(
-        windPy,
-        Plot.groupX({ y: "count" }, { x: "windDirAbb", fill: "#008BFF" })
-      ),
-      Plot.ruleY([0]),
-    ],
-  });
-}
-```
-
 <div class="grid grid-cols-4">
   <div class="card grid-colspan-4">${resize(width => windyRChart(width))}</div>
 </div>
 
-<div class="grid grid-cols-4">
-  <div class="card grid-colspan-2">${Inputs.table(windPy, {rows: 17.5})}</div>
-  <div class="card grid-colspan-2">${resize(width => windyPyChart(width))}</div>
-</div>
