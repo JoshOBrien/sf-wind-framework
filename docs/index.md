@@ -4,11 +4,14 @@ toc: false
 
 # San Francisco wind
 
-This example accesses near real-time wind data using R and Python data loaders, and uses GitHub actions to automatically rebuild and deploy to GitHub pages every 2 hours.
+This example accesses near real-time wind data using an R data loader, and uses
+GitHub actions to automatically rebuild and deploy to GitHub pages every 2
+hours.
 
-The R and Py data loaders are redundant; this is a pedagogical example to test GH actions for both.
+This is a pedagogical example to test GH actions.
 
-**Data:** NOAA Tides and Currents, [CO-OPS API](https://api.tidesandcurrents.noaa.gov/api/prod/)
+**Data:** NOAA Tides and Currents, 
+[CO-OPS API](https://api.tidesandcurrents.noaa.gov/api/prod/)
 
 ## Using data from R data loader
 
